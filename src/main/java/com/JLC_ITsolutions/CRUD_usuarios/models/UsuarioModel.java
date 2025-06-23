@@ -34,4 +34,6 @@ public class UsuarioModel {
     // @Column(nullable = false)
     private String contrasenia;
 
+    // comentario para pruebas :) 
+
 }
