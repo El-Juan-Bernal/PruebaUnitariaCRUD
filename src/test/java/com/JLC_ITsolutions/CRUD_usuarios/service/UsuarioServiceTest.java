@@ -28,6 +28,7 @@ public class UsuarioServiceTest {
         MockitoAnnotations.openMocks(this);
     }
 
+    // Crear usuario
     @Test
     void testCrearUsuario() {
         CuentaDTO cuentaDTO = new CuentaDTO();
@@ -43,6 +44,7 @@ public class UsuarioServiceTest {
         verify(usuariosRepository).save(any(UsuarioModel.class));
     }
 
+    // Listar usuarios
     @Test
     void testListarUsuarios() {
         UsuarioModel u1 = new UsuarioModel(1, "Juan", "Bernal", "juan@bernal.com", "j33");
@@ -53,6 +55,7 @@ public class UsuarioServiceTest {
         verify(usuariosRepository).findAll();
     }
 
+    // Buscar usuario por Id
     @Test
     void testBuscarPorId() {
         UsuarioModel usuario = new UsuarioModel(1, "Juan", "Bernal", "juan@bernal.com", "j33");
@@ -62,4 +65,5 @@ public class UsuarioServiceTest {
         assertThat(resultado.get().getCorreo()).isEqualTo("juan@bernal.com");
         verify(usuariosRepository).findById(1);
     }
+    
 }
