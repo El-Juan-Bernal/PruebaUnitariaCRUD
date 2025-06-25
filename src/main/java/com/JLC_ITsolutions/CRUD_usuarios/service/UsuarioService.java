@@ -10,20 +10,21 @@ import com.JLC_ITsolutions.CRUD_usuarios.DTO.CuentaDTO;
 import com.JLC_ITsolutions.CRUD_usuarios.models.UsuarioModel;
 import com.JLC_ITsolutions.CRUD_usuarios.repository.UsuariosRepository;
 
+
 @Service
 public class UsuarioService {
     @Autowired
 
     private UsuariosRepository repository;
-    public UsuarioModel crearUsuario(CuentaDTO cuentadto){
+    public UsuarioModel crearUsuario(CuentaDTO dto){
         UsuarioModel usuario=new UsuarioModel();
-        usuario.setNombre(cuentadto.getNombre());
+        usuario.setNombre(dto.getNombre());
 
-        usuario.setApellido(cuentadto.getApellido());
+        usuario.setApellido(dto.getApellido());
 
-        usuario.setCorreo(cuentadto.getCorreo());
+        usuario.setCorreo(dto.getCorreo());
 
-        usuario.setContrasenia(cuentadto.getContrasenia());
+        usuario.setContrasenia(dto.getContrasenia());
         return repository.save(usuario);
     }
 
