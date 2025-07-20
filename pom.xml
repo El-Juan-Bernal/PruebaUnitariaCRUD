@@ -50,12 +50,7 @@
 			<scope>runtime</scope>
 		</dependency>
 
-		<!-- Mockito-->
-		<dependency>
-    <groupId>org.mockito</groupId>
-    <artifactId>mockito-core</artifactId>
-    <scope>test</scope>
-</dependency>
+
 
 		<!-- Documentación en swagger -->
 		<dependency>
@@ -64,7 +59,7 @@
 			<version>2.5.0</version>
 		</dependency>
 
-		<!--Para Hateos     para que genere los links -->
+		<!--Para Hateoas     para que genere los links -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-hateoas</artifactId>

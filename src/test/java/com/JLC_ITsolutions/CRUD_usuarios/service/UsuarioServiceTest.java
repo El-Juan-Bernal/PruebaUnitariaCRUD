@@ -34,6 +34,7 @@ class UsuarioServiceTest {
         dto.setCorreo("juan@bernal.com");
         dto.setContrasenia("123");
 
+
         UsuarioModel usuarioGuardado = new UsuarioModel(1, "Juan", "Bernal", "juan@bernal.com", "123");
 
         when(repository.save(any(UsuarioModel.class))).thenReturn(usuarioGuardado);
@@ -159,7 +160,7 @@ class UsuarioServiceTest {
     @Test
     void testIniciarSesionCorreoInexistente() {
         String correo = "noexiste@correo.com";
-        String contrasenia = "cualquier";
+        String contrasenia = "nono";
 
         when(repository.findBycorreo(correo)).thenReturn(Optional.empty());
 

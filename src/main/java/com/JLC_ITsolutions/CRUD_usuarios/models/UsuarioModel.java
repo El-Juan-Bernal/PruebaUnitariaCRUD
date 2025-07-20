@@ -18,11 +18,9 @@ public class UsuarioModel {
     private Integer id;
 
     @NotBlank
-    // @Column(nullable = false)
     private String nombre;
 
     @NotBlank
-    // @Column(nullable = false)
     private String apellido;
 
     @NotBlank
@@ -31,9 +29,7 @@ public class UsuarioModel {
     private String correo;
 
     @NotBlank
-    // @Column(nullable = false)
     private String contrasenia;
 
-    // comentario para pruebas
 
 }
